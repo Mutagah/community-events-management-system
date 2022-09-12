@@ -4,17 +4,16 @@ default: &default
   timeout: 5000
 
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  <<: *default
+  database: "db/development.sqlite3"
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: "db/test.sqlite3"
 
 production:
   <<: *default
+  database: d87ned8pf0lg48
+  username: grqffxptliktuk
   host: ec2-54-91-223-99.compute-1.amazonaws.com
-  database: d87ned8pf0lg48 
-  user: grqffxptliktuk
   password: 70bf5b276adac57d2b02c1379eb814be51f67c5320ee4699cf22f272ded0ba2b
-
